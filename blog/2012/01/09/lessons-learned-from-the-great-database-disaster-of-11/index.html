@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Neflaria Development Blog</title>
+  <title>Lessons Learned from The Great Database Disaster of '11 - Neflaria Development Blog</title>
   <meta name="author" content="Olivine Labs">
 
   
@@ -19,7 +19,7 @@ update that would give us much-needed flexibility on the items system, add new &
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Olivine-Labs.github.com/Neflaria-Blog">
+  <link rel="canonical" href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11">
   <link href="/favicon.ico" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -78,15 +78,12 @@ update that would give us much-needed flexibility on the items system, add new &
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/">Lessons Learned From the Great Database Disaster of &#8216;11</a></h1>
+      <h1 class="entry-title">Lessons Learned From the Great Database Disaster of '11</h1>
     
     
       <p class="meta">
@@ -104,41 +101,83 @@ update that would give us much-needed flexibility on the items system, add new &
 
 <time datetime="2012-01-09T18:24:00-08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2012</time>
         
-         | <a href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>We were working on the &#8220;Shattered Tranquility&#8221; update, an
+<div class="entry-content"><p>We were working on the &#8220;Shattered Tranquility&#8221; update, an
 update that would give us much-needed flexibility on the items system, add new
 zones and monsters to the game, and really enrich the game&#8217;s lore by providing
 random monster lines and quest backstories. We set up a test server, and put a
 test database installation on the production database server; one database was
 called something like &#8220;Neflaria_Test&#8221;, the other &#8220;Neflaria&#8221;.</p>
 
+<!-- more -->
+
+
+<p>We were near the end of our update; we were about a week past our internal
+deadline due to a few extra bugs we found. We wanted to make sure that
+everything was perfectly ready; overhauling the entire items system was no
+small feat. The entire team was on the project; Mattias even came back for a
+few weeks to help out.</p>
+
+<p>One day, about a week away from beta testing, I receive an ominous IM: &#8220;Oh no.&#8221;</p>
+
+<p>While preparing the test environment for the next round of testing, we had
+accidentally deleted the entire player table. This had an interesting effect;
+inventories and stats were stored seperately from the player table, which was
+more account-related and contained login information. So, as we scrambled to
+look for backups (more on this later), players began re-creating accounts, to
+find themselves having a completely different level and inventory than they had
+mere minutes ago.</p>
+
+<p>And then the next disaster was uncovered: the closest database backup we had
+was from a month ago.</p>
+
+<p>We had to make a quick decision; players were logging in, and things were
+going crazy in Neflaria. We could restore the backup from a month ago, or reset
+the game. We also knew that the update would be ready in about two weeks. We
+didn&#8217;t want to reset, because we wanted to do a reset with the next update, and
+we wanted to give everyone warning first. We didn&#8217;t want to restore the backup,
+because at a month old, it would put a <em>lot</em> of players way behind. So, we took
+another option and had a &#8220;crazy week&#8221; while we worked on the update.</p>
+
+<p>Ok, so now that the background is all together, here&#8217;s what we learned.</p>
+
+<ul>
+<li>Keep better database backups. This is web-application-running 101. We <em>had</em>
+a backup system, but we completely failed to check that it was running
+properly, and we let a lot of players down. Now we have constant backups
+that run at several intervals during the day.</li>
+<li>Work on communication. A lot of players were upset, and thought we were
+doing a suprise reset. <em>We won&#8217;t do that.</em> It was a mistake, but we didn&#8217;t do
+a good job at communicating status. We focused all of our efforts on getting
+the update done so that we could release that, when we should have diverted
+some time to talk to the payers.</li>
+<li>Set up contingency plans. We&#8217;ve worked on a framework that allows us to focus
+on the technology behind the game, while allowing the mods and archmods to
+focus on the players in the game. We still have a high activity within the
+game, but we can now delegate communication to the mods.</li>
+</ul>
+
+
+<p>Disasters can happen; we have to do our best to plan for them and make sure
+that during recovery, players know <em>exactly</em> what&#8217;s going on. Our number
+one responsibility is to them.</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/09/blogging-on-octopress-and-github/">Blogging on Octopress and Github</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Olivine Labs</span></span>
+
+      
 
 
 
@@ -150,32 +189,48 @@ called something like &#8220;Neflaria_Test&#8221;, the other &#8220;Neflaria&#82
   
 
 
-<time datetime="2012-01-09T13:50:00-08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/01/09/blogging-on-octopress-and-github/#disqus_thread">Comments</a>
-        
-      </p>
+<time datetime="2012-01-09T18:24:00-08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/whoops/'>whoops</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>We recently made the switch to move our blog from Wordpress to a Jekyll system
-called <a href="http://octopress.org/">Octopress</a>.</p>
-
-<p>Read about it on the <a href="http://blog.olivinelabs.com/blog/2012/01/09/blogging-on-octopress-and-github/">Olivine Labs Blog</a></p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/" data-via="neflariagame" data-counturl="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/09/blogging-on-octopress-and-github/" title="Previous Post: Blogging on Octopress and Github">&laquo; Blogging on Octopress and Github</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -183,7 +238,7 @@ called <a href="http://octopress.org/">Octopress</a>.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/">Lessons Learned from The Great Database Disaster of &#8216;11</a>
+        <a href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/">Lessons Learned from The Great Database Disaster of '11</a>
       </li>
     
       <li class="post">
@@ -197,7 +252,7 @@ called <a href="http://octopress.org/">Octopress</a>.</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -216,6 +271,7 @@ called <a href="http://octopress.org/">Octopress</a>.</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -230,7 +286,10 @@ called <a href="http://octopress.org/">Octopress</a>.</p>
       var disqus_shortname = 'neflaria';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/';
+        var disqus_url = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
