@@ -2,12 +2,13 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://blog.olivinelabs.com
-title: Love Letters from Olivine Labs
-subtitle: Scribblings from the Laboratory
+url: http://Olivine-Labs.github.com/Neflaria-Blog
+title: Neflaria Development Blog
+subtitle: Lightning from the Wizards' Tower
 author: Olivine Labs
+author_url: http://www.olivinelabs.com
 simple_search: http://google.com/search
-description: Olivine Labs is a web applications development studio with principles rooted in open-source.
+description: Development blog for the free online text-based multiplayer RPG Neflaria
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -58,13 +59,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user: Olivine-Labs
+github_user: 
 github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: neflariagame
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -72,7 +73,7 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: true 
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -89,11 +90,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: olivinelabs
+disqus_short_name: neflaria
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: 
+google_analytics_tracking_id: UA-4235223-1
 
 # Facebook Like
 facebook_like: true
