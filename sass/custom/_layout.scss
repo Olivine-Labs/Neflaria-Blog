@@ -21,11 +21,20 @@
 //$sidebar-width-wide: 300px;
 
 html {
-  background: #fcfcfc image-url('groovepaper.png');
+  background:#111 image-url('background-tile.png');
 }
 
 body {
   max-width: inherit;
+}
+
+body > header {
+  background-image: image-url('title-bg.png');
+}
+
+body > footer {
+  background-image: image-url('topbar.png');
+  border: none !important;
 }
 
 #main {
@@ -45,4 +54,12 @@ body > footer {
 
 .sidebar {
   background: #eee;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2, article h1, aside h1 {
+  color: #59449b;
 }
