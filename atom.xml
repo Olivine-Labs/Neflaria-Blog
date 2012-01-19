@@ -4,7 +4,7 @@
   <title><![CDATA[Neflaria Development Blog]]></title>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/atom.xml" rel="self"/>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/"/>
-  <updated>2012-01-19T11:50:13-08:00</updated>
+  <updated>2012-01-19T12:03:26-08:00</updated>
   <id>http://Olivine-Labs.github.com/Neflaria-Blog/</id>
   <author>
     <name><![CDATA[Olivine Labs]]></name>
@@ -60,7 +60,7 @@ between servers, software, and increasing development efficiency, leaving $6,000
 left over.</p>
 
 <p>We also spent a significant portion of our time building a new web development
-framework, <a href="github.com/Olivine-Labs/Mint">Mint</a>,
+framework, <a href="https://github.com/Olivine-Labs/Mint">Mint</a>,
 and we&#8217;re putting together a gaming platform that we can build
 Neflaria on. We&#8217;re open-sourcing much of the software we
 create so that we can give it back to the community; we&#8217;ve also built other
