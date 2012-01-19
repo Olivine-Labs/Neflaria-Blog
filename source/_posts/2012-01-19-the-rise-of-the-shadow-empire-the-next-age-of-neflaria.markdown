@@ -11,7 +11,7 @@ categories: [rise-of-the-shadow-empire,rounds,mint,finances]
 It's always been our goal- at least, for the last several years- to rebuild
 Neflaria with a goal of flexibility (to add new features) and maintainability
 (to fix bugs.) The current codebase is pretty old and cumbersome; it has
-hindered us trying to add new features and fix exiting bugs, and it's kept us
+hindered us trying to add new features and fix existing bugs, and it's kept us
 from moving forward and growing the game as we know Neflaria can.
 
 Let's talk about where Neflaria's going, and what we're doing with our donations.
