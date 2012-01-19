@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Lessons Learned from The Great Database Disaster of '11 - Neflaria Development Blog</title>
+  <title>The Rise of the Shadow Empire: The Next Age of Neflaria - Neflaria Development Blog</title>
   <meta name="author" content="Olivine Labs">
 
   
-  <meta name="description" content="We were working on the &#8220;Shattered Tranquility&#8221; update, an
-update that would give us much-needed flexibility on the items system, add new &hellip;">
+  <meta name="description" content="It&#8217;s always been our goal- at least, for the last several years- to rebuild
+Neflaria with a goal of flexibility (to add new features) and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ update that would give us much-needed flexibility on the items system, add new &
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11">
+  <link rel="canonical" href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria">
   <link href="/favicon.ico" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -80,7 +80,7 @@ update that would give us much-needed flexibility on the items system, add new &
   
   <header>
     
-      <h1 class="entry-title">Lessons Learned From the Great Database Disaster of '11</h1>
+      <h1 class="entry-title">The Rise of the Shadow Empire: The Next Age of Neflaria</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@ update that would give us much-needed flexibility on the items system, add new &
   
 
 
-<time datetime="2012-01-09T18:24:00-08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2012</time>
+<time datetime="2012-01-19T10:46:00-08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,65 +105,80 @@ update that would give us much-needed flexibility on the items system, add new &
   </header>
 
 
-<div class="entry-content"><p>We were working on the &#8220;Shattered Tranquility&#8221; update, an
-update that would give us much-needed flexibility on the items system, add new
-zones and monsters to the game, and really enrich the game&#8217;s lore by providing
-random monster lines and quest backstories. We set up a test server, and put a
-test database installation on the production database server; one database was
-called something like &#8220;Neflaria_Test&#8221;, the other &#8220;Neflaria&#8221;.</p>
+<div class="entry-content"><p><img src="http://i.imgur.com/uedLr.jpg" alt="We can rebuild him. We have the technology." /></p>
+
+<p>It&#8217;s always been our goal- at least, for the last several years- to rebuild
+Neflaria with a goal of flexibility (to add new features) and maintainability
+(to fix bugs.) The current codebase is pretty old and cumbersome; it has
+hindered us trying to add new features and fix exiting bugs, and it&#8217;s kept us
+from moving forward and growing the game as we know Neflaria can.</p>
+
+<p>Let&#8217;s talk about where Neflaria&#8217;s going, and what we&#8217;re doing with our donations.</p>
 
 <!-- more -->
 
 
-<p>We were near the end of our update; we were about a week past our internal
-deadline due to a few extra bugs we found. We wanted to make sure that
-everything was perfectly ready; overhauling the entire items system was no
-small feat. The entire team was on the project; Mattias even came back for a
-few weeks to help out.</p>
+<p>The problem with doing that is time; we need to make sure that we can keep
+content fresh (with, for example, the Age of Quiesence and Shattered Tranquility
+updates) and maintain the current game state, juggle moderation and normal
+day-to-day operations, <em>and</em> find time to rebuild the game. It&#8217;s difficult to
+take the couple months it might take to rebuild the game without parts of the
+live game falling apart.</p>
 
-<p>One day, about a week away from beta testing, I receive an ominous IM: &#8220;Oh no.&#8221;</p>
-
-<p>While preparing the test environment for the next round of testing, we had
-accidentally deleted the entire player table. This had an interesting effect;
-inventories and stats were stored seperately from the player table, which was
-more account-related and contained login information. So, as we scrambled to
-look for backups (more on this later), players began re-creating accounts, to
-find themselves having a completely different level and inventory than they had
-mere minutes ago.</p>
-
-<p>And then the next disaster was uncovered: the closest database backup we had
-was from a month ago.</p>
-
-<p>We had to make a quick decision; players were logging in, and things were
-going crazy in Neflaria. We could restore the backup from a month ago, or reset
-the game. We also knew that the update would be ready in about two weeks. We
-didn&#8217;t want to reset, because we wanted to do a reset with the next update, and
-we wanted to give everyone warning first. We didn&#8217;t want to restore the backup,
-because at a month old, it would put a <em>lot</em> of players way behind. So, we took
-another option and had a &#8220;crazy week&#8221; while we worked on the update.</p>
-
-<p>Ok, so now that the background is all together, here&#8217;s what we learned.</p>
+<p>Thanks to our amazing players, however, we&#8217;ve been able to raise enough funding
+to get some help. We want to be transparent about how much we&#8217;ve made and what
+we&#8217;re doing with the money- we are calling them <em>donations</em>, after all, not sales.
+Here&#8217;s the breakdown:</p>
 
 <ul>
-<li>Keep better database backups. This is web-application-running 101. We <em>had</em>
-a backup system, but we completely failed to check that it was running
-properly, and we let a lot of players down. Now we have constant backups
-that run at several intervals during the day.</li>
-<li>Work on communication. A lot of players were upset, and thought we were
-doing a suprise reset. <em>We won&#8217;t do that.</em> It was a mistake, but we didn&#8217;t do
-a good job at communicating status. We focused all of our efforts on getting
-the update done so that we could release that, when we should have diverted
-some time to talk to the payers.</li>
-<li>Set up contingency plans. We&#8217;ve worked on a framework that allows us to focus
-on the technology behind the game, while allowing the mods and archmods to
-focus on the players in the game. We still have a high activity within the
-game, but we can now delegate communication to the mods.</li>
+<li>We averaged about $2,000 / month in donations from August - December;
+on track for averaging $1,000 in January</li>
+<li>Server costs: 6 webservers, loadbalancing, and large high-CPU database:
+~$560/mo, depending on load.</li>
+<li>We spent about $400 in advertising (banners, setting up a Neflaria store, etc.)</li>
+<li>We spent about $400 on training (developent books, courses, etc.)</li>
+<li>We spent about $1500 on software licenses (source control (Github), Photoshop,
+tracking software, etc.)</li>
 </ul>
 
 
-<p>Disasters can happen; we have to do our best to plan for them and make sure
-that during recovery, players know <em>exactly</em> what&#8217;s going on. Our number
-one responsibility is to them.</p>
+<p>From August - December, we made about $11,000; of that, we spent around $5,000
+between servers, software, and increasing development efficiency, leaving $6,000
+left over.</p>
+
+<p>We also spent a significant portion of our time building a new web development
+framework, <a href="github.com/Olivine-Labs/Mint">Mint</a>,
+and we&#8217;re putting together a gaming platform that we can build
+Neflaria on. We&#8217;re open-sourcing much of the software we
+create so that we can give it back to the community; we&#8217;ve also built other
+systems that we have or are in the process of open-sourcing.</p>
+
+<p><span class='pullquote-right' data-pullquote='what would take us *weeks* to do now will shorten to *days* '>
+The money we have left over combined with  the work we&#8217;ve done on our
+framework leaves us at a place where we can hire a freelancer or two to build
+Neflaria the way it should be, using modern technology that we&#8217;ve built, so
+that we can grow, add new features, and upgrade the game.  The quantifiable
+difference is massive;
+what would take us <em>weeks</em> to do now will shorten to <em>days</em>
+in this new system that we&#8217;ve architected. The system will also be more
+server-efficient, so that we can reduce some of our server costs and at the
+same time handle more players. We&#8217;ve signed a contract for just under $6,000
+to develop Neflaria on this new platform, and we expect work to start in the
+next week.
+</span></p>
+
+<p>In the meantime, the donations we receive will go back into the bank; we need
+to rebuild our savings a bit so that we can prepare to scale up the servers
+and invest in the platform that will be running Neflaria.</p>
+
+<p>Look out for the next blog post that will talk about what new features will be
+in The Rise of the Shadow Empire! We&#8217;ve got some really cool things coming up
+that we&#8217;re excited to share with you and get your feedback on. We&#8217;ll also
+discuss a planned, regular update schedule and talk about what&#8217;s going on with
+resets.</p>
+
+<p>edit: Can&#8217;t get away without giving you a hint: realtime chat and the mystery
+socket is involved</p>
 </div>
 
 
@@ -186,12 +201,12 @@ one responsibility is to them.</p>
   
 
 
-<time datetime="2012-01-09T18:24:00-08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2012</time>
+<time datetime="2012-01-19T10:46:00-08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/whoops/'>whoops</a>
+    <a class='category' href='/blog/categories/finances/'>finances</a>, <a class='category' href='/blog/categories/mint/'>mint</a>, <a class='category' href='/blog/categories/rise-of-the-shadow-empire/'>rise-of-the-shadow-empire</a>, <a class='category' href='/blog/categories/rounds/'>rounds</a>
   
 </span>
 
@@ -200,7 +215,7 @@ one responsibility is to them.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/" data-via="neflariagame" data-counturl="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria/" data-via="neflariagame" data-counturl="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -213,10 +228,8 @@ one responsibility is to them.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/01/09/blogging-on-octopress-and-github/" title="Previous Post: Blogging on Octopress and Github">&laquo; Blogging on Octopress and Github</a>
+        <a class="basic-alignment left" href="/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/" title="Previous Post: Lessons Learned from The Great Database Disaster of '11">&laquo; Lessons Learned from The Great Database Disaster of '11</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria/" title="next Post: The Rise of the Shadow Empire: The Next Age of Neflaria">The Rise of the Shadow Empire: The Next Age of Neflaria &raquo;</a>
       
     </p>
   </footer>
@@ -290,8 +303,8 @@ one responsibility is to them.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/';
-        var disqus_url = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/09/lessons-learned-from-the-great-database-disaster-of-11/';
+        var disqus_identifier = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria/';
+        var disqus_url = 'http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/01/19/the-rise-of-the-shadow-empire-the-next-age-of-neflaria/';
         var disqus_script = 'embed.js';
       
     (function () {
