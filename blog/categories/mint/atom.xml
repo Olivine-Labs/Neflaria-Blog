@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mint | Neflaria Development Blog]]></title>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/categories/mint/atom.xml" rel="self"/>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/"/>
-  <updated>2012-01-19T12:03:26-08:00</updated>
+  <updated>2012-01-19T12:18:10-08:00</updated>
   <id>http://Olivine-Labs.github.com/Neflaria-Blog/</id>
   <author>
     <name><![CDATA[Olivine Labs]]></name>
@@ -23,7 +23,7 @@
 <p>It's always been our goal- at least, for the last several years- to rebuild
 Neflaria with a goal of flexibility (to add new features) and maintainability
 (to fix bugs.) The current codebase is pretty old and cumbersome; it has
-hindered us trying to add new features and fix exiting bugs, and it's kept us
+hindered us trying to add new features and fix existing bugs, and it's kept us
 from moving forward and growing the game as we know Neflaria can.</p>
 
 <p>Let's talk about where Neflaria's going, and what we're doing with our donations.</p>
