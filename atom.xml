@@ -4,7 +4,7 @@
   <title><![CDATA[Neflaria Development Blog]]></title>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/atom.xml" rel="self"/>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/"/>
-  <updated>2012-03-14T12:26:13-07:00</updated>
+  <updated>2012-03-15T15:42:56-07:00</updated>
   <id>http://Olivine-Labs.github.com/Neflaria-Blog/</id>
   <author>
     <name><![CDATA[Olivine Labs]]></name>
@@ -14,17 +14,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Status Update: A New Kind of Chat]]></title>
+    <title type="html"><![CDATA[Status Update A New Kind Of Chat]]></title>
     <link href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/03/13/status-update-a-new-kind-of-chat/"/>
-    <updated>2012-03-13T12:36:00-07:00</updated>
+    <updated>2012-03-13T00:00:00-07:00</updated>
     <id>http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/03/13/status-update-a-new-kind-of-chat</id>
-    <content type="html"><![CDATA[<p>Chat has always been central to Neflaria. It&#8217;s what allows everyone to form
-clans, run auctions, and make lifelong friends (and sometimes enemies.) It’s the
+    <content type="html"><![CDATA[<p>﻿&#8212;
+layout: post
+title: &#8220;Status Update: A New Kind of Chat&#8221;
+date: 2012-03-13 12:36
+comments: true</p>
+
+<h2>categories:  [rise-of-the-shadow-empire,mint]</h2>
+
+<p>Chat has always been central to Neflaria. It&#8217;s what allows everyone to form
+clans, run auctions, and make lifelong friends (and sometimes enemies). It’s the
 meeting ground for the great community we have built together.</p>
 
 <p>However, it’s also one of the most neglected areas of our application
 development; we&#8217;re still running on much the same technology that existed in 2001.
-In the last four years, the only significant updates updates came with
+In the last four years, the only significant updates came with
 Shattered Tranquility’s quest messages, and the name colors that came with the
 credit update.</p>
 
@@ -34,33 +42,32 @@ credit update.</p>
 system further than ever. Imagine:</p>
 
 <ul>
-<li>Real-time chat: no more waiting for chat to refresh!</li>
-<li>Custom chat rooms: have your own room for friends and alliances, and invite multiple friends to
+<li>Real-time chat: No more waiting for chat to refresh!</li>
+<li>Custom chat rooms: Have your own room for friends and alliances, and invite multiple friends to
 private conversations!</li>
-<li>Connect to chat externally: use a chat client such as
-Pidgin and take part in in-game conversations when you can&#8217;t be in the game!</li>
-<li>All html: just like the current chat, you won&#8217;t need any special plugins, just a
+<li>Connect to chat externally: Use a chat client such as
+Pidgin to take part in in-game conversations when you can&#8217;t be in the game!</li>
+<li>All HTML: Just like the current chat, you won&#8217;t need any special plugins, just a
 web browser!</li>
 </ul>
 
 
 <p>We&#8217;ve finished our proof of concept and we&#8217;re even using it internally within
-Olivine Labs to communicate between developers, and we plan to open it up to
+Olivine Labs to communicate between developers. We plan to open it up to
 game staff as we make further progress.</p>
 
-<p>Additionally, we now have a deadline: our goal is a <strong>June 30</strong> release. This
+<p>Additionally, we now have a deadline! Our goal is a <strong>June 30</strong> release and this
 release will include:</p>
 
 <ul>
-<li>Brand-new website</li>
-<li>Updated interface</li>
-<li>New chat system</li>
-<li>The implementation of a new item and equip slot: the Talisman</li>
+<li>Brand-new website!</li>
+<li>Updated interface!</li>
+<li>New chat system!</li>
+<li>The implementation of a new item and equip slot: the Talisman!</li>
 </ul>
 
 
-<p>We’re going to discuss what a Talisman is and what it means for the game in the
-next post.</p>
+<p>In the next post we are going to discuss what exactly a Talisman is and what amazing things it means for Neflaria!</p>
 ]]></content>
   </entry>
   
