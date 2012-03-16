@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Status Update: A New Kind of Chat"
 date: 2012-03-13 12:36
