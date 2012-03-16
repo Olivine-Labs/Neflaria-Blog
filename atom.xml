@@ -4,7 +4,7 @@
   <title><![CDATA[Neflaria Development Blog]]></title>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/atom.xml" rel="self"/>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/"/>
-  <updated>2012-03-15T15:42:56-07:00</updated>
+  <updated>2012-03-16T00:35:07-07:00</updated>
   <id>http://Olivine-Labs.github.com/Neflaria-Blog/</id>
   <author>
     <name><![CDATA[Olivine Labs]]></name>
@@ -14,19 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Status Update A New Kind Of Chat]]></title>
+    <title type="html"><![CDATA[Status Update: A New Kind of Chat]]></title>
     <link href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/03/13/status-update-a-new-kind-of-chat/"/>
-    <updated>2012-03-13T00:00:00-07:00</updated>
+    <updated>2012-03-13T12:36:00-07:00</updated>
     <id>http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/03/13/status-update-a-new-kind-of-chat</id>
-    <content type="html"><![CDATA[<p>﻿&#8212;
-layout: post
-title: &#8220;Status Update: A New Kind of Chat&#8221;
-date: 2012-03-13 12:36
-comments: true</p>
-
-<h2>categories:  [rise-of-the-shadow-empire,mint]</h2>
-
-<p>Chat has always been central to Neflaria. It&#8217;s what allows everyone to form
+    <content type="html"><![CDATA[<p>Chat has always been central to Neflaria. It&#8217;s what allows everyone to form
 clans, run auctions, and make lifelong friends (and sometimes enemies). It’s the
 meeting ground for the great community we have built together.</p>
 
