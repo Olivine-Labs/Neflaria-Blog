@@ -4,7 +4,7 @@
   <title><![CDATA[Neflaria Development Blog]]></title>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/atom.xml" rel="self"/>
   <link href="http://Olivine-Labs.github.com/Neflaria-Blog/"/>
-  <updated>2012-03-16T00:35:07-07:00</updated>
+  <updated>2012-05-23T10:41:58-07:00</updated>
   <id>http://Olivine-Labs.github.com/Neflaria-Blog/</id>
   <author>
     <name><![CDATA[Olivine Labs]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Orbs of Curiosity]]></title>
+    <link href="http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/05/23/talisman/"/>
+    <updated>2012-05-23T12:00:00-07:00</updated>
+    <id>http://Olivine-Labs.github.com/Neflaria-Blog/blog/2012/05/23/talisman</id>
+    <content type="html"><![CDATA[<p><img src="http://Olivine-Labs.github.com/Neflaria-Blog/images/neftalislogo.jpg" alt="Talisman" /></p>
+
+<p>From the depths of the Ruined Temple, adventurers brought back glowing orbs
+among their numerous treasures. All emitted some color of light from within a
+crevice along the side; some sapphire, some emerald, some a fiery ruby. For a
+time, their purpose remained a curiosity; a toy for the rich, and a study for
+the scholars.</p>
+
+<!-- more -->
+
+
+<p>According to rumor, a vicious group of demons surrounded a shepherd and his
+flock, roaming within the realm of Tadaria. The shepherd, an old man and
+unready for a fight, was ready to surrender his life when a bright flame leapt
+out from his orb and smote his attackers, one by one. Bewildered, the surviving
+demons fled in terror. The term &#8220;Talisman&#8221; was coined by the man on that day;
+&#8220;a ward against evil&#8221;.</p>
+
+<p>During that time, the raids against Tadaria were growing in number and
+intensity. At first, the Tadarians were able to repel the roving bands of
+thieves and thugs with ease. However, as word of Tadaria&#8217;s wealth and treasures
+spread, larger and more organized bands of raiders began assaulting its fair
+walls on a regular basis. Finally, the raiders successfully infiltrated the
+city and brought back tales of the orbs and their supposed powers.</p>
+
+<p>These raiders claimed that the source of the power and riches of the Tadarians
+can be traced back to the enhancements given by those mysterious orbs. This
+revelation created an uproar in all Neflarian societies. The rich want
+talismans to augment their power base, the poor want them for protection, and
+the scholars and mages want to unlock the secret for themselves. Their growing
+demands created a huge and lucrative market for these Talismans. And waves
+after waves of seekers continued to crash against both the mighty doors of
+Tadaria and the Ruined Temple&#8230;</p>
+
+<h2>Physical description</h2>
+
+<p>Talismans can be described as grey orbs around the size of 2 human fists
+combined. All of them share a common slot on its side. The slot, like the
+Talisman&#8217;s surface are smooth to the touch. At the end of the slot is some type
+of luminous material that emits a colored light.</p>
+
+<h2>Abilities</h2>
+
+<p>Talismans will give players a stat boost while equipped. Talismans will also
+give player additional elemental damage, based on the type of talisman
+equipped; this may be changed by feeding and evolving the Talisman (as
+explained further on.) Some types of talismans perform rare actions in combat
+to aid the player, such as dealing killing blows and or healing the player back
+to full health, or affect the enemy in general. Talismans also keep track of
+affinity towards a player; the longer you use a talisman, the more likely it is
+to help you and the better boost it can provide. The equipped talismans will be
+attuned to a player; this attunement increases as a player goes into battle;
+this also means that if traded, a talisman will have to re-attune to the new
+player.</p>
+
+<p>Talismans have their own level and stats; they grow by consuming gems. Which
+stat is improved depends on the type of gem, while how much is determined by
+the grade of the gem. Different talismans type are affected by gems
+differently; one type may determine that rubies increase its fire elemental
+damage, while another uses rubies to increase its vitality boost. Talismans
+cannot be fed too often, or they will begin to reject gems.</p>
+
+<p>A talisman can only grow so much, however, until it requires the use of a
+special catalyst to move further. Each transformation results in a talisman
+with extra abilities; while a base talisman may simply boost stats and deal
+elemental damage, a third-evolution talisman may heal the player when close to
+death, or help you deal more critical hits. Special catalysts may even be found
+in late zones and in beast hunts that can turn talismans into rare forms.</p>
+
+<p>In the next talisman blog post, we&#8217;ll talk about what the stat tables might look
+like, and go more in depth with how to level up a talisman (and what that
+means.)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Status Update: A New Kind of Chat]]></title>
@@ -116,7 +196,7 @@ Neflaria on. We&#8217;re open-sourcing much of the software we
 create so that we can give it back to the community; we&#8217;ve also built other
 systems that we have or are in the process of open-sourcing.</p>
 
-<p><span class='pullquote-right' data-pullquote='what would take us *weeks* to do now will shorten to *days* '>
+<p><span class='pullquote-right' data-pullquote='what would take us *weeks* to do now will shorten to *days*'>
 The money we have left over combined with  the work we&#8217;ve done on our
 framework leaves us at a place where we can hire a freelancer or two to build
 Neflaria the way it should be, using modern technology that we&#8217;ve built, so
