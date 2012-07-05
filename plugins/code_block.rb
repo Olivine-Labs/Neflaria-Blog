@@ -78,7 +78,8 @@ module Jekyll
     end
 
     def render(context)
-      code = super
+      output = super
+      code = super.join
       source = "<figure class='code'>"
       source += @caption if @caption
       if @filetype

@@ -137,7 +137,6 @@ body.sidebar-footer {
   }
   #content {
     @extend .group;
-    overflow: visible;
     margin-right: $sidebar-width-medium;
     position: relative;
     .no-sidebar & { margin-right: 0; border-right: 0; }
